@@ -1,7 +1,7 @@
 const state = {
-  language: "zhCN",
-  vue: "vue",
-  antd: "antd"
+  id: "",
+  role: "",
+  token: ""
 };
 
 const getters = {};
