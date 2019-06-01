@@ -1,6 +1,7 @@
 {
   "name": "web",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -13,6 +14,7 @@
     "vue": "^2.6.10",
     "vue-i18n": "^8.11.2",
     "vue-router": "^3.0.3",
+    "vue-socket.io": "^3.0.7",
     "vuex": "^3.0.1",
     "vuex-persistedstate": "^2.5.4"
   },
@@ -26,18 +28,35 @@
     "eslint-plugin-vue": "^5.0.0",
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
-    "lint-staged": "^8.1.5",
     "postcss-px2rem": "^0.3.0",
     "qn-webpack": "^2.0.3",
     "vue-template-compiler": "^2.6.10"
   },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/prettier"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
-  "lint-staged": {
-    "*.{js,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-px2rem": {
+        "remUnit": 100,
+        "baseDpr": 2
+      }
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
 }

@@ -10,8 +10,9 @@ const CDN_BASE =
   "/";
 
 module.exports = {
-  publicPath: IS_DEV ? undefined : CDN_BASE,
+  publicPath: IS_DEV ? "/" : CDN_BASE,
   productionSourceMap: IS_DEV,
+  integrity: true,
   css: {
     extract: false, // 不提取css
     sourceMap: IS_DEV,
@@ -30,6 +31,7 @@ module.exports = {
     webpackConfig.externals({
       "vue-router": "VueRouter",
       "vue-antd-ui": "antd",
+      "vue-i18n": "VueI18n",
       vue: "Vue",
       vuex: "Vuex",
       axios: "axios"

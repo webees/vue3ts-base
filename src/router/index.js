@@ -26,6 +26,8 @@ const scrollBehavior = (to, from, savedPosition) => {
 
 // 嵌入路由
 const router = new Router({
+  mode: "history",
+  base: process.env.BASE_URL,
   path: "/",
   routes,
   scrollBehavior,

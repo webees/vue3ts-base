@@ -5,10 +5,9 @@ import router from "./router";
 import store from "./store";
 import i18n from "./i18n";
 
-import Antd from "ant-design-vue";
+import AntDesignVue from "ant-design-vue";
 
 if (process.env.NODE_ENV === "production") {
-  console.log = () => null; // 禁用打印
   Vue.config.productionTip = false; // 禁用提示
 } else {
   Vue.config.devtools = true; // 开启devtools调试工具
@@ -23,7 +22,7 @@ Vue.config.warnHandler = (msg, vm, trace) => {
   console.log(msg, vm, trace);
 };
 
-Vue.use(Antd);
+Vue.use(AntDesignVue);
 
 new Vue({
   router,

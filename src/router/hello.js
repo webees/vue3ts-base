@@ -1,15 +1,18 @@
 const vue = {
   path: "vue",
-  component: resolve => require(["../views/hello/vue"], resolve)
+  name: "HelloVue",
+  component: () => import(/* webpackChunkName: "HelloVue" */ "../views/hello/Vue")
 };
 
 const antd = {
   path: "antd",
-  component: resolve => require(["../views/hello/antd"], resolve)
+  name: "HelloAntd",
+  component: () => import(/* webpackChunkName: "HelloAntd" */ "../views/hello/Antd")
 };
 
 export default {
   path: "/hello",
-  component: resolve => require(["../views/hello/index"], resolve),
+  name: "Hello",
+  component: () => import(/* webpackChunkName: "Hello" */ "../views/hello/Index"),
   children: [vue, antd]
 };
