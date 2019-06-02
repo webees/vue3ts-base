@@ -27,15 +27,17 @@ module.exports = {
     port: 8888,
     proxy: null
   },
-  chainWebpack: webpackConfig => {
-    webpackConfig.externals({
+  configureWebpack: {
+    externals: {
       "vue-router": "VueRouter",
-      "vue-antd-ui": "antd",
+      "vue-antd-ui": "Antd",
       "vue-i18n": "VueI18n",
       vue: "Vue",
       vuex: "Vuex",
       axios: "axios"
-    });
+    }
+  },
+  chainWebpack: webpackConfig => {
     IS_DEV ? vueServe(webpackConfig) : vueBuild(webpackConfig);
   }
 };
