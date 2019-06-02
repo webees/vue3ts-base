@@ -36,10 +36,6 @@ const router = new Router({
 
 // 钩子
 router.beforeEach((to, from, next) => {
-  console.log(
-    `%c█ ${from.path} => ${to.path}`,
-    "background: rgba(0, 0, 255, 0.1);color: blue"
-  );
   window.document.title = to.meta.title;
   next();
 });

@@ -9,7 +9,7 @@ const store = new Vuex.Store({
   strict: true, // 严格模式
   plugins: [
     // VuexPersistedState({
-      // paths: []
+    // paths: []
     // })
   ]
 });
