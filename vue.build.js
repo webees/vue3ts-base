@@ -22,21 +22,21 @@ module.exports = webpackConfig => {
     })
   ]);
 
-  webpackConfig.plugin("qiniu").use(require("qn-webpack"), [
-    {
-      accessKey: process.env.VUE_APP_QINIU_ACCESS_KEY,
-      secretKey: process.env.VUE_APP_QINIU_SECRET_KEY,
-      bucket: process.env.VUE_APP_QINIU_BUCKET,
-      path: process.env.VUE_APP_QINIU_PATH, // 存储路径，默认为[hash]，也可以指定hash长度，如：[hash:8]
-      exclude: /index\.html$/,
-      include: [
-        /.*\.(js|css)$/,
-        /.*\.(eot|woff|svg|ttf)$/,
-        /.*\.(png|jpg|gif|ico)$/,
-        /.*\.(mp3|wav)$/
-      ],
-      batch: 77, // 可选，批量上传文件并发数，默认20
-      zone: process.env.VUE_APP_QINIU_ZONE // 可选，存储在七牛的机房（华东Zone_z0，华北Zone_z1，华南Zone_z2，北美Zone_na0）
-    }
-  ]);
+  // webpackConfig.plugin("qiniu").use(require("qn-webpack"), [
+    // {
+      // accessKey: process.env.VUE_APP_QINIU_ACCESS_KEY,
+      // secretKey: process.env.VUE_APP_QINIU_SECRET_KEY,
+      // bucket: process.env.VUE_APP_QINIU_BUCKET,
+      // path: process.env.VUE_APP_QINIU_PATH, // 存储路径，默认为[hash]，也可以指定hash长度，如：[hash:8]
+      // exclude: /index\.html$/,
+      // include: [
+        // /.*\.(js|css)$/,
+        // /.*\.(eot|woff|svg|ttf)$/,
+        // /.*\.(png|jpg|gif|ico)$/,
+        // /.*\.(mp3|wav)$/
+      // ],
+      // batch: 77, // 可选，批量上传文件并发数，默认20
+      // zone: process.env.VUE_APP_QINIU_ZONE // 可选，存储在七牛的机房（华东Zone_z0，华北Zone_z1，华南Zone_z2，北美Zone_na0）
+    // }
+  // ]);
 };
