@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
-import VuexPersistedState from "vuex-persistedstate";
+// import VuexPersistedState from "vuex-persistedstate";
 import modules from "./modules";
 Vue.use(Vuex);
 
@@ -8,9 +8,9 @@ const store = new Vuex.Store({
   modules,
   strict: true, // 严格模式
   plugins: [
-    VuexPersistedState({
-      paths: []
-    })
+    // VuexPersistedState({
+      // paths: []
+    // })
   ]
 });
 
