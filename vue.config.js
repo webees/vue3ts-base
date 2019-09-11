@@ -1,8 +1,11 @@
 var vueServe = require('./vue.serve')
 var vueBuild = require('./vue.build')
 
-const IS_DEV = process.env.NODE_ENV === 'production' ? false : true
-const CDN_BASE = '//' + process.env.VUE_APP_CDN_DOMAIN + '/' + process.env.VUE_APP_QINIU_PATH + '/'
+const __NODE_ENV__ = process.env.NODE_ENV
+const __CDN_DOMAIN__ = process.env.VUE_APP_CDN_DOMAIN
+const __QINU_PATH__ = process.env.VUE_APP_QINIU_PATH
+const IS_DEV = __NODE_ENV__ === 'production' ? false : true
+const CDN_BASE = `//${__CDN_DOMAIN__}/${__QINU_PATH__}/`
 
 module.exports = {
   publicPath: IS_DEV ? '/' : CDN_BASE,
