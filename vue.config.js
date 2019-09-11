@@ -30,7 +30,7 @@ module.exports = {
   configureWebpack: {
     externals: {
       "vue-router": "VueRouter",
-      "vue-antd-ui": "Antd",
+      "ant-design-vue": "Antd",
       "vue-i18n": "VueI18n",
       vue: "Vue",
       vuex: "Vuex",
