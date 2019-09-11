@@ -4,6 +4,7 @@ var vueBuild = require('./vue.build')
 const __NODE_ENV__ = process.env.NODE_ENV
 const __CDN_DOMAIN__ = process.env.VUE_APP_CDN_DOMAIN
 const __QINU_PATH__ = process.env.VUE_APP_QINIU_PATH
+
 const IS_DEV = __NODE_ENV__ === 'production' ? false : true
 const CDN_BASE = `//${__CDN_DOMAIN__}/${__QINU_PATH__}/`
 
