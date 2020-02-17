@@ -3,10 +3,55 @@ html {
   user-select: none;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .number {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace !important;
 }
 
 .v-btn {
   text-transform: none;
+}
+
+.rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  to {
+    transform: rotate(-1turn)
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

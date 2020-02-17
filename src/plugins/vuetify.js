@@ -26,7 +26,7 @@ export default new Vuetify({
       }
     },
     icons: {
-      iconfont: 'mdi' // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
+      iconfont: 'mdiSvg' // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4'
     },
     lang: {
       locales: { zhHans },
